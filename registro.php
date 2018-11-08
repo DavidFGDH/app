@@ -1,9 +1,9 @@
 <?php
-$db_host="localhost";
-$db_user="nombre_de_usuario";
-$db_password="contraseña";
-$db_name="nombre_de_base_de_datos";
-$db_table_name="nombre_de_tabla";
+$db_host="dabda-mysqldbserver.mysql.database.azure.com";
+$db_user="davidmaster@dabda-mysqldbserver";
+$db_password="Redderedes.123";
+$db_name="pagina";
+$db_table_name="pags";
    $db_connection = mysql_connect($db_host, $db_user, $db_password);
 
 if (!$db_connection) {
