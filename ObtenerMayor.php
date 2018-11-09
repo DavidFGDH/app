@@ -5,7 +5,7 @@
 	$Num2 = $_REQUEST['Num2'];
 
 	print ("<UL\n>");
-	print ("	<LI>Primer n&uacute;mero: &Num1\n");
+	print ("	<LI>Primer n&uacute;mero: $Num1\n");
 	print ("	<LI>Segundo n&uacute;mero: $Num2\n");
 	print ("<UL\n>");
 
