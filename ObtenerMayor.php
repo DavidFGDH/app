@@ -10,14 +10,14 @@
 	print ("<UL\n>");
 
 	if ($Num1 > $Num2){
-		echo "<p><b>El primer n&uacute;mero es mayor </b></p>"
+		echo "<p><b>El primer n&uacute;mero es mayor </b></p>";
 	}
 	else {
 		if ($Num1 == $Num2){
-			echo "<p><b> El segundo numero n&uacute;meros son iguales </b></p>"
+			echo "<p><b> El segundo numero n&uacute;meros son iguales </b></p>";
 		}
 		else{
-			echo "<p><b> El segundo n&uacute;mero es mayor </b></p>"
+			echo "<p><b> El segundo n&uacute;mero es mayor </b></p>";
 		}
 	}
 ?>
