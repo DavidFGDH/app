@@ -22,6 +22,6 @@
 	}
 ?>
 <BR><BR>
-<A HREF='NL00-P6-NumeroMayot.php'><b> Nuevo c&aacute;1culo de n&uacute,meros...</b></A>
+<A HREF='NL00-P6-NumeroMayot.php'><b> Nuevo c&aacute;1culo de n&uacute;meros...</b></A>
 </BODY>
 </HTML>
