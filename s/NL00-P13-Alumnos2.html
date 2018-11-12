@@ -1,0 +1,298 @@
+<!-- Programa que pida los datos de los alumnos como Número de Control, Nombre, Apellidos, Sexo, Grupo, Semestre y Carrera.
+    Incluye el registro de las materias que se llevan en el tercer semestre con las calificaciones de los 3 parciales.
+    Al momento de pulsar el botón de MOSTRAR DATOS, éstos se deben visualizar en otra pantalla.
+    Archivo: NL00-P13-Alumnos2.html. Autor: Manuel López Chávez. Fecha: Noviembre 11, 2014  -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <title>Registro de datos de alumnos - CBTis No. 168</title>
+
+   <script language="javascript" type="text/javascript">
+
+   //valida que el campo no este vacio y no tenga solo espacios en blanco   
+   function valida(){
+		   
+   		 if(document.inserta.numcontrol.value.length==0){
+    			alert ("  Introduzca el NUMERO DE CONTRO (OBLIGATORIO)")  
+        	document.inserta.numcontrol.focus()
+	        return 0;}
+		   
+	     if(document.inserta.ap1.value.length==0){
+			   alert ("Introduzca el Primer Apellido (OBLIGATORIO)")  
+	       document.inserta.ap1.focus()
+	       return 0;}
+		   
+	     if(document.inserta.nombre.value.length==0){
+			   alert ("Introduzca el Nombre(s) (OBLIGATORIO)")  
+	       document.inserta.nombre.focus()
+	       return 0;}
+	
+	     if(document.inserta.sexo.selectedIndex==0){
+			   alert ("Elija el Sexo (OBLIGATORIO)")  
+	       document.inserta.sexo.focus()
+	       return 0;}
+	
+	     if(document.inserta.gpo.value.length==0){
+			   alert ("Elija el Grupo (OBLIGATORIO)")  
+	       document.inserta.gpo.focus()
+	       return 0;}
+	
+	     if(document.inserta.sem.selectedIndex==0){
+			   alert ("Elija el Semestre (OBLIGATORIO)")  
+	       document.inserta.sem.focus()
+	       return 0;}
+	
+	    if(document.inserta.carr.selectedIndex==0){
+			   alert ("Elija la Carrera (OBLIGATORIO)")  
+	       document.inserta.carr.focus()
+	       return 0;}
+	
+     	if(document.inserta.mat1.value.length==0){
+		     alert ("Elija la Materia 1 (OBLIGATORIO)")  
+	       document.inserta.mat1.focus()
+	       return 0;}
+
+      if(document.inserta.mat2.value.length==0){
+         alert ("Elija la Materia 2 (OBLIGATORIO)")  
+         document.inserta.mat2.focus()
+         return 0;}
+
+      if(document.inserta.mat3.value.length==0){
+         alert ("Elija la Materia 3 (OBLIGATORIO)")  
+         document.inserta.mat3.focus()
+         return 0;}
+
+      if(document.inserta.mat4.value.length==0){
+         alert ("Elija la Materia 4 (OBLIGATORIO)")  
+         document.inserta.mat4.focus()
+         return 0;}
+
+      if(document.inserta.mat5.value.length==0){
+         alert ("Elija la Materia 5 (OBLIGATORIO)")  
+         document.inserta.mat5.focus()
+         return 0;}
+
+      if(document.inserta.mat6.value.length==0){
+         alert ("Elija la Materia 6 (OBLIGATORIO)")  
+         document.inserta.mat6.focus()
+         return 0;}
+	
+   document.inserta.submit();}
+
+   </script>
+</head>
+
+<table width="800" border="0" class="borde">
+  <tr>
+    <td><img src="Imagenes/LogoSEP.jpeg" width="80" height="70" alt="Tamaño original" border="0"> </td>
+    <td align="center">
+      <b>Centro de Bachillerato Tecnológico industrial y de servicios No. 168<br></b>
+      <b><FONT COLOR=#296733>REGISTRO DE DATOS DE ALUMNOS</b><BR></FONT>
+      <b><FONT COLOR=#DD3E4B>Autor: M.C. Manuel López Chávez, Noviembre 2014</b></FONT>
+    </td>
+    <td><img src="Imagenes/DGETI.gif" width="55" height="60" alt="Tamaño original" border="0"> </td>
+  </tr>
+</table>
+	
+<table width="800" border="0" class="borde">
+  <tr>
+      <td bgcolor="#134C08" align="center"> <b><FONT COLOR=FFFFFF>¡ AVISO IMPORTANTE !</b> </FONT></tr>
+  <tr>
+  <td bgcolor="#F2F2F2"><ul type="cicrcle">
+      <FONT FACE="arial narrow">
+          <li>Debes capturar todos los datos <b>CON MAYUSCULAS</b> y sin acentos o caracteres especiales.
+          <li>Todos los campos marcados con (*) son obligatorios. Utiliza la tecla TAB para ir al siguiente campo.
+          </ul>
+      </FONT>
+  </td>
+  </tr>
+</table>
+
+<FORM CLASS="borde" ACTION="RegistraDatos.php" NAME="inserta" id="inserta" METHOD="POST"
+   ENCTYPE="multipart/form-data">
+
+<table width="800" border="0" class="borde">
+  <tr>
+      <td bgcolor="#293867" align="center"> <b><FONT COLOR=FFFFFF>INFORMACION PERSONAL</b> </FONT></tr>
+  <tr>
+</table>
+ 
+<table width="800" border="0" class="borde" bgcolor="#F7F8E0">
+  <tr><tr></tr>
+    <td width="220"><b>Número de Control: *</b></td>
+    <td width="150"><input type="TEXT" name="numcontrol" size="25" maxlength="25" /></td>
+  </tr>
+  <tr>
+    <td width="220">Primer Apellido: *</td>
+    <td width="150"><input type="TEXT" name="ap1" size="30" maxlength="40" /></td>
+    <td width="150">Segundo Apellido:</td>
+    <td width="150"><input type="TEXT" name="ap2" size="30" maxlength="40" /></td>
+  </tr>
+  <tr>
+    <td width="190">Nombre(s): *</td>
+    <td><input type="TEXT" name="nombre" size="30" maxlength="30" /></td>
+    <TD>Sexo: *</TD>
+    <TD>
+    <SELECT name="sexo">
+	<option selected="">
+            <OPTION VALUE="Hombre">Hombre</OPTION>
+            <OPTION VALUE="Mujer">Mujer</OPTION>
+    </SELECT>
+    </TD>
+  </tr>
+  <tr>
+    <td width="220">Grupo (con letra): *</td>
+    <td width="100"><input name="gpo" type="text" size="2"></td>
+    <TD>Semestre: *</TD>
+    <TD>
+      <SELECT name="sem">
+    	  <option selected="">
+            <OPTION VALUE="Primero">Primero</OPTION>
+            <OPTION VALUE="Segundo">Segundo</OPTION>
+            <OPTION VALUE="Tercero">Tercero</OPTION>
+            <OPTION VALUE="Cuarto">Cuarto</OPTION>
+            <OPTION VALUE="Quinto">Quinto</OPTION>
+            <OPTION VALUE="Sexto">Sexto</OPTION>
+       </SELECT>
+     </TD>
+  </tr>
+  <tr>
+    <TD>Carrera: *</TD>
+    <TD>
+      <SELECT name="carr">
+        <option selected="">
+            <OPTION VALUE="CONSTRUCCION">Técnico  en Construcción</OPTION>
+            <OPTION VALUE="LABORATORIO CLINICO">Técnico en Laboratorio Clínico</OPTION>
+            <OPTION VALUE="MECANICA INDUSTRIAL">Técnico en Mecánica Industrial</OPTION>
+            <OPTION VALUE="MECATRONICA">Técnico en Mecatrónica</OPTION>
+            <OPTION VALUE="OFIMATICA">Técnico en Ofimática</OPTION>
+            <OPTION VALUE="PROGRAMACION">Técnico en Programación</OPTION>
+       </SELECT>
+     </TD>    
+  </tr>
+</table>
+
+<table width="800" border="0" class="borde">
+  <tr>
+      <td bgcolor="#293867" align="center"> <b><FONT COLOR=FFFFFF>CALIFICACIONES</b> </FONT></tr>
+  <tr>
+</table>
+
+<table width="800" border="0" class="borde" bgcolor="#F7F8E0">
+  <tr>
+    <TD>Materia 1: *</TD>
+    <TD>
+      <SELECT name="mat1">
+        <option selected="">
+            <OPTION VALUE="BIOLOGIA">Biología</OPTION>
+            <OPTION VALUE="DESARROLLA SOFTWARE DE APLICACION">Desarrolla Software de Aplicación...</OPTION>
+            <OPTION VALUE="DISEÑA Y ADMINISTRA BD">Diseña y Administra Bases de Datos...</OPTION>
+            <OPTION VALUE="ETICA">Ética</OPTION>
+            <OPTION VALUE="GEOMETRIA ANALITICA">Geometría Analítica</OPTION>
+            <OPTION VALUE="INGLES III">Inglés III</OPTION>
+       </SELECT>
+     </TD>    
+    <TD>Parcial 1:<input type="TEXT" name="m1p1" value="0" size="5"></TD>
+    <TD>Parcial 2:<input type="TEXT" name="m1p2" value="0" size="5"></TD>
+    <TD>Parcial 3:<input type="TEXT" name="m1p3" value="0" size="5"></TD>
+  </tr>
+  <tr>
+    <TD>Materia 2: *</TD>
+    <TD>
+      <SELECT name="mat2">
+        <option selected="">
+            <OPTION VALUE="BIOLOGIA">Biología</OPTION>
+            <OPTION VALUE="DESARROLLA SOFTWARE DE APLICACION">Desarrolla Software de Aplicación...</OPTION>
+            <OPTION VALUE="DISEÑA Y ADMINISTRA BD">Diseña y Administra Bases de Datos...</OPTION>
+            <OPTION VALUE="ETICA">Ética</OPTION>
+            <OPTION VALUE="GEOMETRIA ANALITICA">Geometría Analítica</OPTION>
+            <OPTION VALUE="INGLES III">Inglés III</OPTION>
+       </SELECT>
+     </TD>    
+    <TD>Parcial 1:<input type="TEXT" name="m2p1" value="0" size="5"></TD>
+    <TD>Parcial 2:<input type="TEXT" name="m2p2" value="0" size="5"></TD>
+    <TD>Parcial 3:<input type="TEXT" name="m2p3" value="0" size="5"></TD>
+  </tr>
+  <tr>
+    <TD>Materia 3: *</TD>
+    <TD>
+      <SELECT name="mat3">
+        <option selected="">
+            <OPTION VALUE="BIOLOGIA">Biología</OPTION>
+            <OPTION VALUE="DESARROLLA SOFTWARE DE APLICACION">Desarrolla Software de Aplicación...</OPTION>
+            <OPTION VALUE="DISEÑA Y ADMINISTRA BD">Diseña y Administra Bases de Datos...</OPTION>
+            <OPTION VALUE="ETICA">Ética</OPTION>
+            <OPTION VALUE="GEOMETRIA ANALITICA">Geometría Analítica</OPTION>
+            <OPTION VALUE="INGLES III">Inglés III</OPTION>
+       </SELECT>
+     </TD>    
+    <TD>Parcial 1:<input type="TEXT" name="m3p1" value="0" size="5"></TD>
+    <TD>Parcial 2:<input type="TEXT" name="m3p2" value="0" size="5"></TD>
+    <TD>Parcial 3:<input type="TEXT" name="m3p3" value="0" size="5"></TD>
+  </tr>
+  <tr>
+    <TD>Materia 4: *</TD>
+    <TD>
+      <SELECT name="mat4">
+        <option selected="">
+            <OPTION VALUE="BIOLOGIA">Biología</OPTION>
+            <OPTION VALUE="DESARROLLA SOFTWARE DE APLICACION">Desarrolla Software de Aplicación...</OPTION>
+            <OPTION VALUE="DISEÑA Y ADMINISTRA BD">Diseña y Administra Bases de Datos...</OPTION>
+            <OPTION VALUE="ETICA">Ética</OPTION>
+            <OPTION VALUE="GEOMETRIA ANALITICA">Geometría Analítica</OPTION>
+            <OPTION VALUE="INGLES III">Inglés III</OPTION>
+       </SELECT>
+     </TD>    
+    <TD>Parcial 1:<input type="TEXT" name="m4p1" value="0" size="5"></TD>
+    <TD>Parcial 2:<input type="TEXT" name="m4p2" value="0" size="5"></TD>
+    <TD>Parcial 3:<input type="TEXT" name="m4p3" value="0" size="5"></TD>
+  </tr>
+  <tr>
+    <TD>Materia 5: *</TD>
+    <TD>
+      <SELECT name="mat5">
+        <option selected="">
+            <OPTION VALUE="BIOLOGIA">Biología</OPTION>
+            <OPTION VALUE="DESARROLLA SOFTWARE DE APLICACION">Desarrolla Software de Aplicación...</OPTION>
+            <OPTION VALUE="DISEÑA Y ADMINISTRA BD">Diseña y Administra Bases de Datos...</OPTION>
+            <OPTION VALUE="ETICA">Ética</OPTION>
+            <OPTION VALUE="GEOMETRIA ANALITICA">Geometría Analítica</OPTION>
+            <OPTION VALUE="INGLES III">Inglés III</OPTION>
+       </SELECT>
+     </TD>    
+    <TD>Parcial 1:<input type="TEXT" name="m5p1" value="0" size="5"></TD>
+    <TD>Parcial 2:<input type="TEXT" name="m5p2" value="0" size="5"></TD>
+    <TD>Parcial 3:<input type="TEXT" name="m5p3" value="0" size="5"></TD>
+  </tr>
+  <tr>
+    <TD>Materia 6: *</TD>
+    <TD>
+      <SELECT name="mat6">
+        <option selected="">
+            <OPTION VALUE="BIOLOGIA">Biología</OPTION>
+            <OPTION VALUE="DESARROLLA SOFTWARE DE APLICACION">Desarrolla Software de Aplicación...</OPTION>
+            <OPTION VALUE="DISEÑA Y ADMINISTRA BD">Diseña y Administra Bases de Datos...</OPTION>
+            <OPTION VALUE="ETICA">Ética</OPTION>
+            <OPTION VALUE="GEOMETRIA ANALITICA">Geometría Analítica</OPTION>
+            <OPTION VALUE="INGLES III">Inglés III</OPTION>
+       </SELECT>
+     </TD>    
+    <TD>Parcial 1:<input type="TEXT" name="m6p1" value="0" size="5"></TD>
+    <TD>Parcial 2:<input type="TEXT" name="m6p2" value="0" size="5"></TD>
+    <TD>Parcial 3:<input type="TEXT" name="m6p3" value="0" size="5"></TD>
+  </tr>
+
+</table>
+<P>
+
+<table width="800" border="0" class="borde" bgcolor="#D8D8D8">
+<tr>
+  <td align="center" width="200"><INPUT TYPE="BUTTON"  onclick="valida();" NAME="Guardar" VALUE="REGISTRAR DATOS"></td>
+  <td align="center" width="200"><INPUT TYPE="RESET" NAME="Cancelar" VALUE="CANCELAR"></td>
+</table> 
+</FORM>
+
+</body>		  
+</html>

@@ -1,0 +1,56 @@
+<!--Programa que se conecta a la base de datos ESCUELA168 para realizar consulta de datos mediante el NUMERO DE CONTROL 
+    Archivo: NL00-12-ConsultaRegistros.php. Autor: Manuel López Chávez. Fecha: Noviembre 17, 2014  -->
+<html>
+<head>
+	<title>CBTis 168: Consulta de Calificaciones</title>
+  <!-- Copiar dentro del tag HEAD -->
+   <SCRIPT LANGUAGE="JavaScript">
+
+   function Enviar(form) {
+   for (i = 0; i < form.elements.length; i++) {
+      if (form.elements[i].type == "text"  && form.elements[i].value == "") {  
+         alert("Por favor ingrese el Número de Control"); form.elements[i].focus(); 
+         return false; }
+      }
+      form.submit();
+    }
+</SCRIPT>
+</head>
+<body bgcolor="#FFFFFF">
+<center>
+<br><br>
+<table width="60%" border="0" cellspacing="3" cellpadding="2" bgcolor="#666999">
+  <tr bgcolor="#F7F2E0">
+    <td>
+       <div align="center">
+       <font face="Arial, Helvetica" size="5" color="#61210B"><b>Consulta de Calificaciones</b></font></div>
+       <br>
+       <center>
+       <font face="Arial, Helvetica" size="5"><b>PERIODO: Agosto - Diciembre 2014</b></font></div>
+       </center>
+    </td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td>
+       <form method="post" action="BuscaCalif.php">
+         <table width="350" border="0" cellspacing="0" cellpadding="2" align="center">
+            <tr><td>&nbsp;</td></tr>
+            <tr>
+               <td> <font face="Arial, Helvetica" size="4">Número de Control:</font> </td>
+               <td> <input type "text" name="NumControl" size=20" maxlength=20> </td>
+            </tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr>
+                <td colspan="2">
+                    <div align="center">
+                    <input type="submit" name="buscar" size=16" value="Consultar"
+                           onClick="return Enviar(this.form)"></div>
+                </td>            
+            </tr>
+         </table>
+       </form>
+</table>
+<font face="Arial, Helvetica" size="2">NOTA: No es un documento oficial, solo es informativo</font>
+<center>
+</body>
+</html>
