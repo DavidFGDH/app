@@ -27,7 +27,7 @@ color: white;
 </style>
 </head>
 <body>
-<FROM ACTION="guardar1.php" METHOD="POST">
+<FROM ACTION="1.php" METHOD="POST">
 	Numero de Control*       : <INPUT TYPR="integer" NAME="NDP" VALUE="" SIZE="15"><br>
 	Primer Apellido*         : <INPUT TYPE="text" NAME="PA" VALUE="" SIZE="15">
 	Segundo Apellido         : <INPUT TYPE="text" NAME="PA2" VALUE="" SIZE="15"><br>
