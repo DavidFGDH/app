@@ -6,7 +6,7 @@ $db_user="davidmaster@dabda-mysqldbserver";
 
 $db_password="Redderedes.123";
 
-$db_name="forumulario";
+$db_name="formulario";
 
 $db_table_name="form1";
 
