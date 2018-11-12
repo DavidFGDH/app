@@ -20,7 +20,7 @@ if (!$db_connection) {
 
 }
 
-$insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` (`NumCon` , `Primer_Apellido` , `Segundo_Apellido` , `Nombre` , `Sexo`) VALUES ('{$_POST['NDP']}','{$_POST['PA']}','{$_POST['PA2']}','{$_POST['NO']}','{$_POST['sel2']}')";
+$insert_value = "INSERT INTO from2 (`NumCon` , `Primer_Apellido` , `Segundo_Apellido` , `Nombre` , `Sexo`) VALUES ('{$_POST['NDP']}','{$_POST['PA']}','{$_POST['PA2']}','{$_POST['NO']}','{$_POST['sel2']}')";
 $retry_value = mysql_query($insert_value, $db_connection);
 
 
