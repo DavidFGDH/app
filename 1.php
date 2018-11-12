@@ -16,16 +16,16 @@ $db_table_name="form2";
 
 if (!$db_connection) {
 
-	die('No se ha podido conectar a la base de datos s');
+	die('No se ha podido conectar a la base de datos');
 
 }
 
-$subs_numeroC = $_REQUEST($_POST['NDP']);
+$subs_numeroC = utf8_decode($_POST['NDP']);
 
-$subs_PrimAp = $_REQUEST($_POST['PA']);
-$subs_Segap = $_REQUEST($_POST['PA2']);
-$subs_Nombr = $_REQUEST($_POST['NO']);
-$subs_email = $_REQUEST($_POST['sel2']);
+$subs_PrimAp = utf8_decode($_POST['PA']);
+$subs_Segap = utf8_decode($_POST['PA2']);
+$subs_Nombr = utf8_decode($_POST['NO']);
+$subs_email = utf8_decode($_POST['sel2']);
 
 
 
