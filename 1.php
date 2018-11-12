@@ -16,7 +16,7 @@ $db_table_name="form2";
 
 if (!$db_connection) {
 
-	die('No se ha podido conectar a la base de datos');
+	die('No se ha podido conectar a la base de datos s');
 
 }
 
