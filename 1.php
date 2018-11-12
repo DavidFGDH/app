@@ -20,12 +20,11 @@ if (!$db_connection) {
 
 }
 
-$subs_numeroC = utf8_decode($_POST['NDP']);
-
-$subs_PrimAp = utf8_decode($_POST['PA']);
-$subs_Segap = utf8_decode($_POST['PA2']);
-$subs_Nombr = utf8_decode($_POST['NO']);
-$subs_email = utf8_decode($_POST['sel2']);
+$subs_numeroC = $_REQUEST['NDP'];
+$subs_PrimAp = $_REQUEST['PA'];
+$subs_Segap = $_REQUEST['PA2'];
+$subs_Nombr = $_REQUEST['NO'];
+$subs_email = $_REQUEST['sel2'];
 
 
 
