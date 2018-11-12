@@ -6,13 +6,13 @@
 <?PHP
 
    // Se establecen las variables para la conexión a las bases de datos
-   $servidor = "localhost";
-   $usuario  = "root";
-   $clave    = "";
+   $servidor = "dabda-mysqldbserver.mysql.database.azure.com";
+   $usuario  = "davidmaster@dabda-mysqldbserver";
+   $clave    = "Redderedes.123";
 
    // Se establecen las variables de la base de datos y tabla(s) para la conexión
-   $bd     = "escuela168";
-   $tabla1  = "alumnos";
+   $bd     = "formulario";
+   $tabla1  = "form2";
    $tabla2  = "calificaciones";
 
    // Se establece la conexión al servidor de bases de datos
