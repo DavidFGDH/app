@@ -20,38 +20,7 @@ if (!$db_connection) {
 
 }
 
-$subs_numeroC = $_REQUEST['NDP'];
-$subs_PrimAp = $_REQUEST['PA'];
-$subs_Segap = $_REQUEST['PA2'];
-$subs_Nombr = $_REQUEST['NO'];
-$subs_email = $_REQUEST['sel2'];
-
-
-
-$resultado=mysql_query("SELECT * FROM ".$db_table_name." WHERE Email = '".$subs_email."'", $db_connection);
-
-
-
-if (mysql_num_rows($resultado)>0)
-
-{
-
-
-
-header('Location: Fail.html');
-
-
-
-} else {
-
-	
-
-	$insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` (`NumCon` , `Primer_Apellido` , `Segundo_Apellido` , `Nombre` , `Sexo`) VALUES ("' . $subs_numeroC . '", "' . $subs_PrimAp . '", "' . $subs_Segap . '","' . $subs_Nombr . '","' . $subs_email . '")';
-
-
-
-mysql_select_db($db_name, $db_connection);
-
+$insert_value = 'INSERT INTO `' . $db_name . '`.`'.$db_table_name.'` (`NumCon` , `Primer_Apellido` , `Segundo_Apellido` , `Nombre` , `Sexo`) VALUES ('{$_POST['NDP']}','{$_POST['PA']}','{$_POST['PA2']}','{$_POST['NO']}','{$_POST['sel2']}')";
 $retry_value = mysql_query($insert_value, $db_connection);
 
 
