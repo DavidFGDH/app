@@ -1,7 +1,7 @@
 <?php
 $db_host="dabda-mysqldbserver.mysql.database.azure.com";
 $db_user="davidmaster@dabda-mysqldbserver";
-$db_password="Redderedes.123";
+$db_password="redes.123";
 $db_name="pagina";
 $db_table_name="pags";
    $db_connection = mysql_connect($db_host, $db_user, $db_password);
