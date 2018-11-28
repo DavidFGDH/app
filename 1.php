@@ -4,7 +4,7 @@ $db_host="dabda-mysqldbserver.mysql.database.azure.com";
 
 $db_user="davidmaster@dabda-mysqldbserver";
 
-$db_password="Redderedes.123";
+$db_password="Red";
 
 $db_name="formulario";
 
